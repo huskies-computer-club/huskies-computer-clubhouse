@@ -18,7 +18,7 @@ export default function Home() {
             The spotlight is on you! Join us to stay connected on the latest events, hackatons, workshops and meetings.
           </p>
 
-          <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900"
+          <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-zinc-900 dark:bg-zinc-900"
           >
             <Link
               href="/home"
