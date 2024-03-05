@@ -18,17 +18,17 @@ export default function Home() {
             The spotlight is on you! Join us to stay connected on the latest events, hackatons, workshops and meetings.
           </p>
 
-          <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900"
+          <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900"
           >
-              <Link
-                href="/home"
-                className="flex justify-center gap-2 px-4 py-2 font-semibold text-white transition-colors duration-200 rounded-lg bg-primary-600 hover:bg-primary-700"
-              >
-                Sign Up or Login
-              </Link>
-      </BackgroundGradient>
+            <Link
+              href="/home"
+              className="flex justify-center gap-2 px-4 py-2 font-semibold text-white transition-colors duration-200 rounded-lg bg-primary-600 hover:bg-primary-700"
+            >
+              Sign Up or Login
+            </Link>
+          </BackgroundGradient>
 
-    </div>
+        </div>
 
       </div >
     </main >
