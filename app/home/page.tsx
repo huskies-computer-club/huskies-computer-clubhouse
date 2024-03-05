@@ -25,7 +25,7 @@ export default async function DashboardPage() {
                     <p>The winner will receive an email to pick up the price.</p>
                 </>
             )}
-            {/* <BackgroundBeams /> */}
+            <BackgroundBeams />
         </div>
     );
 }
