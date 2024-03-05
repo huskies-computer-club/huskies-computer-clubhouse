@@ -1,7 +1,4 @@
-import Image from "next/image";
-import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
-import { cn } from "@/utils/cn";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { BackgroundGradient } from "@/components/ui/background-gradient"
 

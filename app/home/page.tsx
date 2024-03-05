@@ -13,7 +13,7 @@ export default async function DashboardPage() {
     const user = await clerkClient.users.getUser(userId);
 
     return (
-        <>
+        <div>
             {user && (
                 <>
                     <h1 className="text-3xl font-semibold">
@@ -25,7 +25,7 @@ export default async function DashboardPage() {
                     <p>The winner will receive an email to pick up the price.</p>
                 </>
             )}
-            <BackgroundBeams />
-        </>
+            {/* <BackgroundBeams /> */}
+        </div>
     );
 }
