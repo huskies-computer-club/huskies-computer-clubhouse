@@ -1,8 +1,28 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Pre-Requites
+
+Have PostgreSql installed. For people with Macs download [postgresql app](https://postgresapp.com) and [Postico](https://eggerapps.at/postico/v1.php). For Windows users download [pgAdmin 4](https://www.pgadmin.org/download/pgadmin-4-windows).
+
+Create an account with [Clerk](https://clerk.com) this is so you can use the api key and api secret to create users locally when logging in. Add these values to your .env file. Check .env.template for example.
+
+Create a .env file and add all variables necessary. Follow .env.template as an example
+
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm i
+```
+
+Second, run migrations:
+
+```bash
+npx prisma migrate dev --name init
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
