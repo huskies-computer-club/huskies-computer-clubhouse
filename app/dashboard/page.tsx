@@ -1,7 +1,6 @@
 // create a form to add items to the database
 'use client'
 import { FormEvent, useState } from "react";
-// import { Protect } from "@clerk/nextjs";
 import { useAuth, useOrganizationList } from "@clerk/nextjs";
 
 
@@ -13,28 +12,30 @@ export default function DashboardPage() {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const res = await fetch("/api/items", {
-            method: "POST",
-            body: JSON.stringify({ name, price, description, image_url }),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-        if (res.ok) {
-            console.log("Item added");
-        } else {
-            console.log("Error adding item");
+        try {
+
+            const res = await fetch("/api/items", {
+                method: "POST",
+                body: JSON.stringify({ name, price, description, image_url }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            if (res.ok) {
+                console.log("Item added");
+            } else {
+                console.log("Error adding item");
+            }
+
+        } catch (error) {
+            console.error("Error adding item", error);
         }
     };
-    const { has } = useAuth();
-    const canManageSettings = has && has({ permission: "org:create:item" });
-    console.log("canManageSettings", canManageSettings);
     const { isLoaded, setActive, userMemberships } = useOrganizationList({
         userMemberships: {
             infinite: true,
         },
     });
-    console.log(userMemberships)
     if (!isLoaded) {
         return <div>Loading...</div>;
     } else {
